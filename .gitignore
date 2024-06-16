@@ -1,0 +1,14 @@
+# Mac system files
+.DS_Store
+
+# dotenv environment variables file
+.env
+
+# Operating system files
+Thumbs.db
+Desktop.ini
+
+# Node Modules
+node_modules
+
+test.js
