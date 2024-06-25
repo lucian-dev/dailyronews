@@ -47,6 +47,7 @@ export async function fetchNews(selectedSources) {
             title: item.title,
             summary: summary,
             url: item.link,
+            source: source.name,
           });
         });
       } catch (error) {
@@ -100,4 +101,70 @@ export function setNextAlarm() {
       }
     });
   });
+}
+
+export function fetchWeather(apiKey) {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+      fetchWeatherData(latitude, longitude, apiKey, "your location");
+    },
+    () => {
+      // Default to Bucharest if location access is denied or fails
+      const defaultCity = {
+        lat: 44.4268,
+        lon: 26.1025,
+        name: "Bucharest",
+      };
+      fetchWeatherData(defaultCity.lat, defaultCity.lon, apiKey, defaultCity.name);
+    }
+  );
+}
+
+// Function to fetch weather data
+function fetchWeatherData(lat, lon, apiKey, cityName = "your location") {
+  const weatherElement = document.createElement("div");
+  weatherElement.className = "weather";
+  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data && data.main && data.weather) {
+        const temperature = Math.round(data.main.temp);
+        const weatherHTML = `
+          <p class="weather-temp">${temperature} °C</p>
+          <p class="weather-city">${cityName}</p>
+          <p class="weather-desc">${data.weather[0].description}</p>
+        `;
+        weatherElement.innerHTML = weatherHTML;
+        document.querySelector("header.drn-header").prepend(weatherElement);
+      } else {
+        console.error("Weather data is not complete:", data);
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching weather data:", error);
+    });
+}
+
+export function fetchExchangeRate(apiKey) {
+  const exchangeRateElement = document.createElement("div");
+  exchangeRateElement.className = "currency";
+  fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/EUR`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data && data.conversion_rates && data.conversion_rates.RON) {
+        const exchangeRate = data.conversion_rates.RON;
+        const exchangeRateHTML = `
+          <h4>Today currency</h4>
+          <p class="exchange-rate">1 EUR = ${exchangeRate.toFixed(2)} RON</p>
+        `;
+        exchangeRateElement.innerHTML = exchangeRateHTML;
+        document.querySelector("header.drn-header").appendChild(exchangeRateElement);
+      } else {
+        console.error("Exchange rate data is not complete:", data);
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching exchange rate data:", error);
+    });
 }

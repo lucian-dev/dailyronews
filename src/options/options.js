@@ -1,8 +1,8 @@
-import { fetchNews, setNextAlarm, createNotification } from "../helpers/helpers.js";
+import { fetchNews, setNextAlarm, createNotification, fetchWeather, fetchExchangeRate } from "../helpers/helpers.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   // Load existing settings from storage
-  chrome.storage.sync.get(["sources", "frequency", "firstVisit"], function (data) {
+  chrome.storage.sync.get(["sources", "frequency", "firstVisit", "weatherApiKey", "currencyApiKey"], function (data) {
     if (!data.firstVisit) {
       // First visit: Set default settings
       chrome.storage.sync.set({ firstVisit: true, sources: [], frequency: "60" }, function () {
@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
           frequencySelect.value = data.frequency;
         }
       }
+    }
+    if (data.weatherApiKey) {
+      fetchWeather(data.weatherApiKey);
+    }
+    if (data.currencyApiKey) {
+      fetchExchangeRate(data.currencyApiKey);
     }
   });
 

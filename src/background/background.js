@@ -9,6 +9,8 @@ chrome.runtime.onInstalled.addListener(() => {
       frequency: "60",
       sources: [],
       apiKey: "iyxqfkmarifagmyurbzqh1dsws4jrx6r26o9mlyg",
+      weatherApiKey: "8fd25009e6adc7a3bb8b5aab18a5ab45",
+      currencyApiKey: "9b3a46058ba69871a8d58c44",
     };
     chrome.storage.sync.set(defaultSettings, () => {
       console.log("Initial setup complete. Redirecting to options page.");

@@ -1,4 +1,18 @@
 /* Global styles */
+
+/* Remove default margin */
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;

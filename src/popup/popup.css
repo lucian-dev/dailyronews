@@ -47,7 +47,30 @@ body h2 {
   margin-top: 5px;
 }
 
+.news-item-source {
+  font-weight: 300;
+}
+
 .news-item p {
   font-size: 14px;
   line-height: 1.3;
+  margin: 25px 0;
+}
+
+.share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.share-buttons i {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  color: #2b2d42;
+  transition: all 0.3s ease-in-out;
+}
+
+.share-buttons i:hover {
+  color: #ef233c;
 }

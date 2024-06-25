@@ -5,26 +5,81 @@ body {
   justify-content: center;
 }
 
+body:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/bg_page.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  opacity: 0.05;
+}
+
 .drn-card {
+  width: 100%;
+  max-width: 500px;
   border: 1px solid #8d99ae;
-  padding: 50px 100px;
+  padding: 50px;
+  margin: 15px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .drn-header {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 0 auto 25px;
-  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.drn-header img {
+.weather {
+  width: auto;
+  text-align: center;
+}
+
+.weather-city {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2b2d42;
+}
+
+.weather-desc {
+  font-size: 14px;
+}
+
+.weather-temp {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ef233c;
+}
+
+.currency {
+  width: auto;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 700;
+}
+.currency h4 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.drn-logo {
+  width: 125px;
+  height: 125px;
+  margin: 25px auto;
+}
+
+.drn-logo img {
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 
 .drn-section {
@@ -32,7 +87,8 @@ body {
 }
 
 .drn-card h1 {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .source-item {
