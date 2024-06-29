@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const newsDiv = document.createElement("div");
         newsDiv.classList.add("news-item");
         newsDiv.innerHTML = `
-          <h4><a href="${newsItem.url}" target="_blank">${newsItem.title}</a> <span class="news-item-source">Source: ${newsItem.source}</span></h4>
+          <h4><a href="${newsItem.url}" target="_blank">${newsItem.title}</a> <span class="news-item-source">Sursa: ${newsItem.source}</span></h4>
           <p>${newsItem.summary}</p>
           <div class="share-buttons">
             <span>Share: </span>
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     } else {
-      newsContainer.innerHTML = "<p>No articles available.</p>";
+      newsContainer.innerHTML = "<p>Nu sunt articole disponibile.</p>";
     }
   });
 });

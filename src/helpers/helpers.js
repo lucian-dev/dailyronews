@@ -155,7 +155,7 @@ export function fetchExchangeRate(apiKey) {
       if (data && data.conversion_rates && data.conversion_rates.RON) {
         const exchangeRate = data.conversion_rates.RON;
         const exchangeRateHTML = `
-          <h4>Today currency</h4>
+          <h4>Curs EURO Azi</h4>
           <p class="exchange-rate">1 EUR = ${exchangeRate.toFixed(2)} RON</p>
         `;
         exchangeRateElement.innerHTML = exchangeRateHTML;

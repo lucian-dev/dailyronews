@@ -3,62 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DailyRoNews Options</title>
+    <title>Setări DailyRoNews</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
-    <link rel="stylesheet" href="../global.css" />
-    <link rel="stylesheet" href="options.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   </head>
   <body>
-    <section class="drn-card">
-      <header class="drn-header"></header>
-      <div class="drn-logo">
-        <img src="../../assets/icons/Icon128.png" alt="DailyRoNews" />
+    <div class="drn-wrapper">
+      <section class="drn-card">
+        <header class="drn-header"></header>
+        <div class="drn-logo">
+          <img src="../../assets/icons/Icon128.png" alt="DailyRoNews" />
+        </div>
+        <h1>DailyRoNews</h1>
+        <form id="options-form">
+          <div class="drn-section">
+            <h4>Selectează sursele:</h4>
+            <div class="source-item">
+              <input type="checkbox" id="digi24" name="sources" value="Digi24" />
+              <label for="digi24">Digi24</label>
+            </div>
+            <div class="source-item">
+              <input type="checkbox" id="protv" name="sources" value="ProTV" />
+              <label for="protv">ProTV</label>
+            </div>
+            <div class="source-item">
+              <input type="checkbox" id="adevarul" name="sources" value="Adevarul" />
+              <label for="adevarul">Adevărul</label>
+            </div>
+            <div class="source-item">
+              <input type="checkbox" id="hotnews" name="sources" value="HotNews" />
+              <label for="hotnews">HotNews</label>
+            </div>
+            <div class="source-item">
+              <input type="checkbox" id="mediafax" name="sources" value="Mediafax" />
+              <label for="mediafax">Mediafax</label>
+            </div>
+            <div class="source-item">
+              <input type="checkbox" id="romanialibera" name="sources" value="Romania Libera" />
+              <label for="romanialibera">România Liberă</label>
+            </div>
+          </div>
+          <div class="drn-section">
+            <h4>Setări notificări:</h4>
+            <div class="freq-item">
+              <label for="frequency">Frecvența notificărilor:</label>
+              <select id="frequency" name="frequency">
+                <option value="60">În fiecare oră</option>
+                <option value="360">La 6 ore</option>
+                <option value="1440">Zilnic</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="primary-button">Salvează</button>
+        </form>
+        <footer class="drn-footer">
+          <a href="https://lucian-web.dev/contact" target="_blank">Suport</a> |
+          <a href="https://www.paypal.com/donate/?hosted_button_id=JDA4ZCHXNXZVG" target="_blank">
+            <i class="fas fa-coffee"></i>
+            Buy me a coffee
+          </a>
+        </footer>
+      </section>
+      <div id="loading" style="display: none">
+        <img src="../../assets/images/loading-icon.gif" alt="Loading..." />
       </div>
-      <h1>DailyRoNews Options</h1>
-      <form id="options-form">
-        <div class="drn-section">
-          <h4>Select News Sources:</h4>
-          <div class="source-item">
-            <input type="checkbox" id="digi24" name="sources" value="Digi24" />
-            <label for="digi24">Digi24</label>
-          </div>
-          <div class="source-item">
-            <input type="checkbox" id="protv" name="sources" value="ProTV" />
-            <label for="protv">ProTV</label>
-          </div>
-          <div class="source-item">
-            <input type="checkbox" id="adevarul" name="sources" value="Adevarul" />
-            <label for="adevarul">Adevarul</label>
-          </div>
-          <div class="source-item">
-            <input type="checkbox" id="hotnews" name="sources" value="HotNews" />
-            <label for="hotnews">HotNews</label>
-          </div>
-          <div class="source-item">
-            <input type="checkbox" id="mediafax" name="sources" value="Mediafax" />
-            <label for="mediafax">Mediafax</label>
-          </div>
-          <div class="source-item">
-            <input type="checkbox" id="romanialibera" name="sources" value="Romania Libera" />
-            <label for="romanialibera">Romania Libera</label>
-          </div>
-        </div>
-        <div class="drn-section">
-          <h4>Notification Settings:</h4>
-          <div class="freq-item">
-            <label for="frequency">Notification Frequency:</label>
-            <select id="frequency" name="frequency">
-              <option value="60">Hourly</option>
-              <option value="360">Every 6 hours</option>
-              <option value="1440">Daily</option>
-            </select>
-          </div>
-        </div>
-        <button type="submit" class="primary-button">Save Settings</button>
-      </form>
-    </section>
-    <div id="loading" style="display: none">
-      <img src="../../assets/images/loading-icon.gif" alt="Loading..." />
     </div>
     <script src="options.js" type="module" defer></script>
   </body>

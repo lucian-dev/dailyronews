@@ -9,6 +9,7 @@ Thumbs.db
 Desktop.ini
 
 # Node Modules
-node_modules
-
+node_modules/
+test_key.pem
+*.pem
 test.js

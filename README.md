@@ -1,42 +1,42 @@
 # DailyRoNews
 
-**DailyRoNews** is a Google Chrome extension designed to keep you updated with the latest news from Romania directly in your browser. Customize your news feed, receive notifications for the latest updates, and never miss out on important news again.
+**DailyRoNews** este o extensie pentru Google Chrome proiectată să te țină la curent cu ultimele știri din România direct în browserul tău. Personalizează-ți fluxul de știri, primește notificări pentru cele mai recente actualizări și nu rata niciodată știrile importante.
 
-## Features
+## Funcționalități
 
-- **Customizable News Sources**: Choose from a variety of Romanian news sources to get the updates that matter most to you.
-- **Regular Updates**: Set your preferred frequency for news updates, from hourly to daily.
-- **Notifications**: Receive notifications for the latest news articles directly in your browser.
-- **User-Friendly Interface**: Easy to navigate options page for quick setup and customization.
-- **Weather Updates**: Get the current weather of your location directly on the options page.
-- **Currency Exchange Rates**: View the latest EUR to RON exchange rate on the options page.
-- **Enhanced Notifications**: Share news articles directly on Facebook, Twitter, and LinkedIn from the popup.
+- **Surse de știri personalizabile**: Alege dintr-o varietate de surse de știri românești pentru a primi actualizările care contează cel mai mult pentru tine.
+- **Actualizări regulate**: Setează-ți frecvența preferată pentru actualizările de știri, de la orare la zilnice.
+- **Notificări**: Primește notificări pentru cele mai recente articole de știri direct în browserul tău.
+- **Interfață prietenoasă**: Pagina de setări ușor de navigat pentru configurare rapidă și personalizare.
+- **Actualizări meteo**: Află vremea curentă din locația ta direct pe pagina de setări.
+- **Cursuri valutare**: Vezi cel mai recent curs de schimb EUR-RON pe pagina de setări.
+- **Notificări îmbunătățite**: Distribuie articole de știri direct pe Facebook, Twitter și LinkedIn din popup.
 
-## Installation
+## Instalare
 
-1. **Download** the extension files.
-2. **Open Chrome** and navigate to `chrome://extensions/`.
-3. **Enable Developer Mode** in the top right corner.
-4. **Click "Load unpacked"** and select the `DailyRoNews` folder.
+1. **Descarcă** fișierele extensiei.
+2. **Deschide Chrome** și navighează la chrome://extensions/.
+3. **Activează modul Dezvoltator** în colțul din dreapta sus.
+4. **Click pe “Load unpacked”** și selectează folderul DailyRoNews.
 
-## Usage
+## Utilizare
 
-1. **Activate the Extension**: Click on the DailyRoNews icon in your Chrome toolbar to open the extension popup.
-2. **Select News Sources**: Select the news sources you want to receive updates from by going to the options page.
-3. **Select Frequency**: Set your preferred update frequency.
-4. **View Weather and Currency**: Check the current weather and EUR to RON exchange rate on the options page.
-5. **Extension Popup Notifications**: Receive notifications for new articles based on your chosen settings.
-6. **Click to Read Article**: Click on notifications to read the full articles in your browser.
-7. **Share Articles**: Share articles on Facebook, Twitter, and LinkedIn directly from the popup.
+1. **Activează Extensia**: Click pe iconița DailyRoNews din bara de instrumente Chrome pentru a deschide popup-ul extensiei.
+2. **Selectează sursele de știri**: Selectează sursele de știri de la care vrei să primești actualizări accesând pagina de setări.
+3. **Selectează frecvența**: Setează-ți frecvența preferată pentru actualizări.
+4. **Vezi vremea și cursul valutar**: Verifică vremea curentă și cursul de schimb EUR-RON pe pagina de setări.
+5. **Notificări popup pentru extensie**: Primește notificări pentru articole noi pe baza setărilor tale alese.
+6. **Click pentru a citi articolul**: Click pe notificări pentru a citi articolele complete în browserul tău.
+7. **Distribuie articole**: Distribuie articole pe Facebook, Twitter și LinkedIn direct din popup.
 
-## Privacy Policy
+## Politica de confidențialitate
 
-DailyRoNews does not collect, store, or transmit any personal data from users.
+DailyRoNews nu colectează, stochează sau transmite date personale ale utilizatorilor.
 
-## Support
+## Suport
 
-For support, visit our [Support Page](https://lucian-web.dev).
+Pentru suport, vizitează [Support Page](https://lucian-web.dev).
 
-## License
+## Licență
 
-This project is licensed under the MIT License.
+Acest proiect este licențiat sub Licența MIT.
