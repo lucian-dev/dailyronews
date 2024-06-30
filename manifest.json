@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "DailyRoNews",
-  "description": "Primește cele mai recente știri din România direct în browserul tău.",
-  "version": "1.2",
+  "description": "Primește cele mai recente știri din România direct în browserul tău cu notificări instantanee.",
+  "version": "1.3",
   "permissions": ["notifications", "storage", "alarms", "background"],
   "background": {
     "service_worker": "src/background/background.js",

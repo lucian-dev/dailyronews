@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if (selectedSources.length === 0) {
-      alert("Please select at least one source.");
+      alert("Te rog să selectezi cel puțin o sursă.");
       loadingDiv.style.display = "none";
       return;
     }
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
               console.log("Fetch failed message received in options page.");
             }
             loadingDiv.style.display = "none"; // Hide loading icon
-            alert("Failed to fetch news. Please check your selected sources and try again.");
+            alert("Nu s-a putut prelua știrile. Te rog să verifici sursele selectate și să încerci din nou.");
           });
         }
       });
@@ -96,11 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "fetchComplete") {
     console.log("Fetch complete message received in options page.");
-    createNotification("News Fetch Complete", "Your news has been fetched. Check your extension popup.");
+    createNotification("Preluarea știrilor completă", "Știrile tale au fost preluate. Verifică popup-ul extensiei.");
     sendResponse({ status: "success" });
   } else if (request.action === "fetchFailed") {
     console.log("Fetch failed message received in options page.", request.message);
-    createNotification("News Fetch Failed", request.message || "Failed to fetch news. Please check your selected sources.");
+    createNotification("Preluarea știrilor a eșuat", request.message || "Nu s-a putut prelua știrile. Te rog să verifici sursele selectate.");
     sendResponse({ status: "failure" });
   }
   return true; // Keep the message channel open for sendResponse

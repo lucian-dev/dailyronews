@@ -23,10 +23,10 @@ chrome.runtime.onInstalled.addListener(() => {
 // Listener for messages from other parts of the extension
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "fetchComplete") {
-    createNotification("News Fetch Complete", "Your news has been fetched. Check your extension popup.");
+    createNotification("Preluarea știrilor completă", "Știrile tale au fost preluate. Verifică popup-ul extensiei.");
     sendResponse({ status: "success" });
   } else if (request.action === "fetchFailed") {
-    createNotification("News Fetch Failed", request.message || "Failed to fetch news. Please check your selected sources.");
+    createNotification("Preluarea știrilor a eșuat", request.message || "Nu s-a putut prelua știrile. Te rog să verifici sursele selectate.");
     sendResponse({ status: "failure" });
   }
   return true; // Keep the message channel open for sendResponse
@@ -46,11 +46,11 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
           const news = await fetchNews(selectedSources);
           chrome.storage.sync.set({ news }, () => {
             console.log("News fetched and stored successfully.");
-            createNotification("News Fetch Complete", "Your news has been fetched. Check your extension popup.");
+            createNotification("Preluarea știrilor completă", "Știrile tale au fost preluate. Verifică popup-ul extensiei.");
           });
         } catch (error) {
           console.error("Error fetching news: ", error);
-          createNotification("News Fetch Failed", error.message || "Failed to fetch news. Please check your selected sources.");
+          createNotification("Preluarea știrilor a eșuat", error.message || "Nu s-a putut prelua știrile. Te rog să verifici sursele selectate.");
         }
       }
     });
